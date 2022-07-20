@@ -73,3 +73,6 @@ printf("X|%s","Epsilon");
 return 0;
 }
 }
+
+------------output------------
+T->T*F|F
