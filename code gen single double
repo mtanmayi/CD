@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    
+int i=0,k=3,ch;
+char a[10];
+printf("enter exp\n");
+scanf("%s",&a);
+printf("1.single address\t 2.double address\n");
+printf("enter choice\n");
+scanf("%d",&ch);
+switch(ch)
+{
+    case 1:
+    printf("LOAD %c",a[2]);
+    while(a[i]!='\0')
+    {
+        if(a[i+3]=='+')
+        printf("add %c\n",a[i+4]);
+        if(a[i+3]=='-')
+        printf("sub %c\n",a[i+4]);
+        i=i+2;
+    }
+    printf("STORE %c",a[0]);
+    break;
+    
+    case 2:
+    while(a[k]!='\0')
+    {
+        if(a[k]=='+')
+        printf("add %c %c\n",a[2],a[k+1]);
+        if(a[k]=='-')
+        printf("sub %c %c\n",a[2],a[k+1]);
+        k=k+2;
+    }
+    if(a[1]=='=')
+    printf("MOV %c %c",a[0],a[2]);
+    break;
+}
+
+}
+
+------------------output--------------
+a=b+c-d
